@@ -1,11 +1,41 @@
+
+import '../style/style.css'
+
+
+import React from 'react';
 import Link from 'next/link';
-// pages/_app.js
-import '../style/style.css';
-
-
+import { BiColor } from 'react-icons/bi';
+import Header from '../component/Header/header';
+import Footer from '../component/Footer/footer';
 
  function Contact() {
   return(
+    <div>
+        <header>
+    <h1>AL HIRA TRAVELS</h1>
+    <nav>
+      <ul className="flex space-x-4">
+        <li>
+          <Link href="/">Home</Link>
+        </li>
+        <li>
+          <Link href="/about">About</Link>
+        </li>
+        <li>
+          <Link href="/contact">Contact</Link>
+        </li>
+        <li>
+          <Link href="/services">Services</Link>
+        </li>
+        <li>
+          <Link href="/apple">Images</Link>
+        </li>
+      </ul>
+    </nav>
+  </header>
+        
+    
+    
         <div className="row justify-content-center mt-5">
             <div className="col-md-7 text-center">
                 <h2>Have a <span>Question?</span></h2>
@@ -50,13 +80,23 @@ import '../style/style.css';
                     <button 
                         type="submit" 
                         className="btn btn-primary py-3 px-5"
-                    >
+                    >  <Link href='hirahammad34@gmail.com'></Link>
                         Submit
                     </button>
                 </form>
+               
             </div>
+            
         </div>
-    );
+        <div>
+         <footer className="white">
+      <p>About us</p>
+      <p>&copy; 2024 AL Hira Travels. All Rights Reserved.</p>
+    </footer>
+        </div>
+    </div>
+
+    )
 };
 
 export default Contact;

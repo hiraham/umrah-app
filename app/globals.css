@@ -7,58 +7,205 @@
  styles/globals.css 
  
  
-body {
-  font-family: Arial, sans-serif;
+/* General Styles */
+* {
   margin: 0;
   padding: 0;
- 
-  
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-h1 {
+body {
+  background-color: #f4f4f4;
   color: #333;
+}
+
+/* Header */
+header {
+  background-color: hsl(214, 39%, 49%);
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+header h1 {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  margin-right: 10px;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+}
+
+header nav ul li {
+  display: inline;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #ddd;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+}
+
+main h2 {
+  color: hsl(214, 39%, 49%);
+  font-size: 28px;
+  margin-bottom: 10px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+main section {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
   text-align: center;
-  text-size: 100px;
-  background-color:lightgray;
-  font-size: xx-large;
+  padding: 10px 0;
+  margin-top: 20px;
+  animation: fadeInUp 1s ease-in-out;
+}
 
+footer p {
+  font-size: 14px;
+}
 
+/* Hero Component */
+.hero {
+  
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  animation: zoomIn 1s ease-in-out;
+}
 
+.hero h2 {
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+footer {
+  padding: 1rem;
+  background-color: #479ef5;
+  text-align: center; 
+}
+/* styles/global.css */
+header {
+  background-color: #479ef5; 
+  padding: 1rem;
+  text-align: center;
 }
 
 nav ul {
-  list-style-type: none;
+  list-style-type: none; 
   padding: 0;
-  background-color:lightgray;
-  text-align: center;
-  
 }
 
 nav ul li {
-  display: inline;
-  margin-right: 10px;
-  
+  display: inline; 
 }
 
-a {
-  text-decoration: none;
-  color: blue;
+nav a {
+  text-decoration: none; 
+  color: blue; 
+  transition: color 0.3s; 
 }
 
-a:hover {
-  text-decoration: underline;
+nav a:hover {
+  color:white; /* Change link color on hover */
 }
 
-p{
-  margin: 0;
-  padding: 10px;
-  background-color: lightblue;
-  text-align:left;
-  text-size: 50px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font: 400;
-  font-size: xx-large;
-  background-color: lightblue;
-  ;
-  
+.logo {
+  position: relative;
+  overflow: hidden;
 }
+
+.logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.responsiveImg {
+  width: 70%; /* Adjust this value to change the size */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Center image if needed */
+  margin: 0 auto; /* Center align the image */
+}
+
+
+
+
+
+

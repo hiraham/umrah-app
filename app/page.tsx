@@ -1,47 +1,59 @@
-import Image from 'next/image';
+import React from 'react';
 import Link from 'next/link';
+import Header from './component/Header/header';
+import Footer from'./component/Footer/footer';
+import Hero from './component/Hero/hero';
+import styles from './style/style.module.css';
+// Example import in Website.tsx and About.tsx
 
 
 
 
 
-import react from 'react';
-import { TbHelpSquareFilled } from 'react-icons/tb';
-
- function Website() {
+function Website() {
   return (
-
-    
-      <div>
-      <h1><b>Welcome to Our Website!</b></h1>
-      
-      
-      
-
-      <br></br>
-
-       <nav>
-         <ul>
-          
-    
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/about">About</Link></li>
-          <li><Link href="/contact">Contact</Link></li>
-          <li><Link href="/services">Services</Link></li>
-          
-           </ul>
+    <div>
+      <header>
+        <h1>
+          <img src="./LOGO.png" width={100} height={50} alt="Website Logo" />
+         <i> AL HIRA TRAVELS</i>
+        </h1>
+        <nav>
+          <ul>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/about">About</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
+            <li><Link href="/services">Services</Link></li>
+            <li><Link href="/apple">Images</Link></li>
+          </ul>
         </nav>
-        <div>
+      </header>
+
+      <main>
+        <h2><i><b>Welcome to Our Website!</b></i></h2>
+        <Hero />
+        <section>
+          <h2>Discover the world with us! At <b><i>Al Hira Travels</i></b>...</h2>
+          <p>
+            We believe every journey is an opportunity to create unforgettable memories...
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; 2024 AL Hira Travels. All Rights Reserved.</p>
         <br></br>
+        <Link href='https://github.com/hiraham'>Github</Link>
+        <br></br>
+        <Link href='https://www.linkedin.com/in/hira-hammad-6847592b5/'>linkedin</Link>
         
-      <h6 className='bg-slate-100'>
-      <i><b className='text-left'>Welcome to Our Website !</b></i>
-      <br></br>
-      
-      "Discover the world with us! At <b><i>" Al Hira Travels"</i></b>, we believe every journey is an opportunity to create unforgettable memories. Whether you're seeking a tranquil escape, an exhilarating adventure, or a cultural immersion, our team is here to craft the perfect itinerary tailored to your desires. From breathtaking beaches and vibrant cities to serene mountain retreats, we offer a wide range of destinations and experiences for every type of traveler. Let us handle all the details so you can focus on enjoying the journey. Your dream vacation is just a click away—explore, dream, and travel with us!"
-      </h6>
-       </div> 
+
+        <br></br>
+        <Link href='https://vercel.com/hirahams-projects'> vercel</Link>
+      </footer>
     </div>
-  )
-};
+    
+  );
+}
+
 export default Website;
